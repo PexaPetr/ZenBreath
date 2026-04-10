@@ -31,7 +31,7 @@ Zkopírujte `.env.example` na `.env` a doplňte hodnoty. Soubor `.env` je v `.gi
 
 ## GitHub a deploy
 
-1. Commitněte změny a pushněte na `origin` (`main`).
+1. Commitněte změny a pushněte na `origin` (`main`). (Volitelný soubor `.github/workflows/ci.yml` pro GitHub Actions vyžaduje u Personal Access Token oprávnění **workflow**.)
 2. Na [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/) nebo [Cloudflare Pages](https://pages.cloudflare.com/) připojte tento repozitář.
 3. Nastavení buildu obvykle: **Build command** `npm run build`, **Output** `dist`.
 4. Na hostingu přidejte stejné env proměnné jako v `.env` (např. `VITE_GEMINI_API_KEY`).
