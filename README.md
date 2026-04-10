@@ -1,42 +1,20 @@
-# ZenBreath
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Webová aplikace postavená na [Vite](https://vitejs.dev/) + [React](https://react.dev/) + TypeScript — vhodný základ pro kód exportovaný z [Google AI Studio](https://aistudio.google.com/).
+# Run and deploy your AI Studio app
 
-## Požadavky
+This contains everything you need to run your app locally.
 
-- [Node.js](https://nodejs.org/) (LTS, např. 20 nebo 22)
-- npm (součást Node)
+View your app in AI Studio: https://ai.studio/apps/b823aab9-3def-48c5-ae7d-a3ae0789b05b
 
-## Lokální vývoj
+## Run Locally
 
-```bash
-npm install
-npm run dev
-```
+**Prerequisites:**  Node.js
 
-Otevřete v prohlížeči adresu, kterou Vite vypíše (obvykle `http://localhost:5173`).
 
-## Build
-
-```bash
-npm run build
-npm run preview
-```
-
-Výstup produkčního buildu je ve složce `dist/`.
-
-## Proměnné prostředí
-
-Zkopírujte `.env.example` na `.env` a doplňte hodnoty. Soubor `.env` je v `.gitignore` a na GitHub se necommituje.
-
-## GitHub a deploy
-
-1. Push na `main` (repozitář `PexaPetr/ZenBreath`). Volitelný GitHub Actions workflow vyžaduje u PAT oprávnění **workflow**.
-2. **Vercel:** Import Project → vyberte repo → Node 20+ (viz `.nvmrc`). Build a výstup jsou v [`vercel.json`](vercel.json); po importu často stačí potvrdit výchozí nastavení.
-3. **Netlify:** Add new site → Import from Git → build `npm run build`, publish `dist` (nebo použijte [`netlify.toml`](netlify.toml)).
-4. **Cloudflare Pages:** Framework preset *Vite*, build `npm run build`, output `dist`.
-5. V nastavení hostingu přidejte env proměnné jako v `.env` (např. `VITE_GEMINI_API_KEY`).
-
-## Šablona AI Studio
-
-Původní GitHub banner z AI Studia je v souboru `README.ai-studio-template.md`.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
