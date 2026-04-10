@@ -1,11 +1,41 @@
-<div align="center">
+# ZenBreath
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Webová aplikace postavená na [Vite](https://vitejs.dev/) + [React](https://react.dev/) + TypeScript — vhodný základ pro kód exportovaný z [Google AI Studio](https://aistudio.google.com/).
 
-  <h1>Built with AI Studio</h2>
+## Požadavky
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- [Node.js](https://nodejs.org/) (LTS, např. 20 nebo 22)
+- npm (součást Node)
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Lokální vývoj
 
-</div>
+```bash
+npm install
+npm run dev
+```
+
+Otevřete v prohlížeči adresu, kterou Vite vypíše (obvykle `http://localhost:5173`).
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+Výstup produkčního buildu je ve složce `dist/`.
+
+## Proměnné prostředí
+
+Zkopírujte `.env.example` na `.env` a doplňte hodnoty. Soubor `.env` je v `.gitignore` a na GitHub se necommituje.
+
+## GitHub a deploy
+
+1. Commitněte změny a pushněte na `origin` (`main`).
+2. Na [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/) nebo [Cloudflare Pages](https://pages.cloudflare.com/) připojte tento repozitář.
+3. Nastavení buildu obvykle: **Build command** `npm run build`, **Output** `dist`.
+4. Na hostingu přidejte stejné env proměnné jako v `.env` (např. `VITE_GEMINI_API_KEY`).
+
+## Šablona AI Studio
+
+Původní GitHub banner z AI Studia je v souboru `README.ai-studio-template.md`.
