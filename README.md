@@ -31,10 +31,11 @@ Zkopírujte `.env.example` na `.env` a doplňte hodnoty. Soubor `.env` je v `.gi
 
 ## GitHub a deploy
 
-1. Commitněte změny a pushněte na `origin` (`main`). (Volitelný soubor `.github/workflows/ci.yml` pro GitHub Actions vyžaduje u Personal Access Token oprávnění **workflow**.)
-2. Na [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/) nebo [Cloudflare Pages](https://pages.cloudflare.com/) připojte tento repozitář.
-3. Nastavení buildu obvykle: **Build command** `npm run build`, **Output** `dist`.
-4. Na hostingu přidejte stejné env proměnné jako v `.env` (např. `VITE_GEMINI_API_KEY`).
+1. Push na `main` (repozitář `PexaPetr/ZenBreath`). Volitelný GitHub Actions workflow vyžaduje u PAT oprávnění **workflow**.
+2. **Vercel:** Import Project → vyberte repo → Node 20+ (viz `.nvmrc`). Build a výstup jsou v [`vercel.json`](vercel.json); po importu často stačí potvrdit výchozí nastavení.
+3. **Netlify:** Add new site → Import from Git → build `npm run build`, publish `dist` (nebo použijte [`netlify.toml`](netlify.toml)).
+4. **Cloudflare Pages:** Framework preset *Vite*, build `npm run build`, output `dist`.
+5. V nastavení hostingu přidejte env proměnné jako v `.env` (např. `VITE_GEMINI_API_KEY`).
 
 ## Šablona AI Studio
 
