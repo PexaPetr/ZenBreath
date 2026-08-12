@@ -91,7 +91,7 @@ export default function BreathingVisual({ phase, language, progress }: Props) {
       : "transform 450ms cubic-bezier(0.65, 0, 0.35, 1)";
 
   return (
-    <div className="relative flex items-center justify-center w-96 max-w-[90vw] h-96 max-h-[min(24rem,70vw)] select-none">
+    <div className="relative flex items-center justify-center w-96 max-w-[90vw] h-96 max-h-[min(24rem,70vw)] select-none pointer-events-none">
       {/* Distant ambient halo */}
       <div
         className="absolute inset-[-20%] rounded-full blur-[110px] transition-opacity duration-[1500ms]"
