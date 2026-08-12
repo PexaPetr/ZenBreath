@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 body {
-  background-color: #05070a;
+  background-color: #060812;
   color: #e2e8f0;
   font-family: "Inter", system-ui, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .font-serif {
@@ -25,4 +25,10 @@ body {
 
 .breathe-bg {
   animation: breathe 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breathe-bg {
+    animation: none;
+  }
 }

@@ -27,7 +27,9 @@ Výstup produkčního buildu je ve složce `dist/`.
 
 ## Proměnné prostředí
 
-Zkopírujte `.env.example` na `.env` a doplňte hodnoty. Soubor `.env` je v `.gitignore` a na GitHub se necommituje.
+Zkopírujte `.env.example` na `.env` a nastavte **`VITE_GEMINI_API_KEY`** (stejný klíč jako v Google AI Studio pro Gemini). Bez něj TTS (`gemini-2.5-flash-preview-tts`) nepoběží.
+
+**Bezpečnost:** Klíč v prohlížeči je viditelný ve zdrojáku buildu — pro veřejný web používejte spíš proxy na serveru nebo omezení klíče v Google Cloud.
 
 ## GitHub a deploy
 

@@ -1,0 +1,16 @@
+{
+  "name": "ZenBreath",
+  "short_name": "ZenBreath",
+  "description": "Vedené dýchání 4–7–8 pro klid před spánkem.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#060812",
+  "theme_color": "#060812",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
