@@ -276,7 +276,7 @@ export default function App() {
   const showIdleControls = phase === BreathingPhase.IDLE;
 
   return (
-    <div className="min-h-screen bg-[#060812] text-slate-200 flex flex-col items-center justify-center p-6 relative overflow-x-hidden select-none">
+    <div className="min-h-[100dvh] bg-[#060812] text-slate-200 flex flex-col items-center justify-center px-6 py-4 relative overflow-x-hidden select-none">
       <p className="sr-only" aria-live="polite" aria-atomic="true">
         {ariaPhase}
       </p>
@@ -310,9 +310,9 @@ export default function App() {
           <SpeakerIcon muted={voiceMuted} />
         </button>
       )}
-      <div className="z-10 w-full max-w-xl flex flex-col items-center text-center space-y-16">
-        <header className="space-y-3">
-          <h1 className="text-6xl md:text-7xl font-serif italic text-white tracking-tight drop-shadow-2xl">ZenBreath</h1>
+      <div className="z-10 w-full max-w-xl flex flex-col items-center text-center space-y-6 md:space-y-16">
+        <header className="space-y-2 md:space-y-3">
+          <h1 className="text-4xl md:text-7xl font-serif italic text-white tracking-tight drop-shadow-2xl">ZenBreath</h1>
           <p className="text-slate-500 font-light tracking-[0.4em] uppercase text-[11px] opacity-80">
             {language === "en" ? "Sleep preparation" : "Příprava na spánek"}
           </p>
@@ -331,11 +331,11 @@ export default function App() {
             </p>
           )}
         </header>
-        <div className="relative py-4">
+        <div className="relative py-2 md:py-4">
           {assetsReady ? (
             <BreathingVisual phase={phase} language={language} progress={progress} />
           ) : (
-            <div className="w-80 max-w-full min-h-[20rem] flex flex-col items-center justify-center space-y-6 px-4">
+            <div className="w-80 max-w-full min-h-[14rem] md:min-h-[20rem] flex flex-col items-center justify-center space-y-6 px-4">
               {assetsLoading && (
                 <div className="w-12 h-12 border-[3px] border-indigo-400/10 border-t-indigo-400 rounded-full animate-spin" role="status" aria-label={loadingMsg} />
               )}
@@ -378,7 +378,7 @@ export default function App() {
         </div>
         {showIdleControls && (
           <div
-            className={`w-full max-w-sm space-y-14 transition-all duration-1000 transform ${assetsLoading && !assetBlock ? "opacity-40 scale-95 pointer-events-none" : "opacity-100 scale-100"}`}
+            className={`w-full max-w-sm space-y-8 md:space-y-14 transition-all duration-1000 transform ${assetsLoading && !assetBlock ? "opacity-40 scale-95 pointer-events-none" : "opacity-100 scale-100"}`}
           >
             <div className="flex justify-center flex-wrap gap-3" role="group" aria-label={language === "en" ? "Language" : "Jazyk"}>
               {(["en", "cs"] as const).map((lang) => (
@@ -399,7 +399,7 @@ export default function App() {
               onClick={() => void startSession()}
               disabled={!assetsReady}
               aria-disabled={!assetsReady}
-              className="group relative w-full py-6 bg-white text-black rounded-full font-bold uppercase tracking-[0.3em] text-[11px] transition-all duration-500 hover:scale-[1.04] active:scale-95 disabled:opacity-25 disabled:pointer-events-none shadow-[0_25px_50px_-12px_rgba(255,255,255,0.15)] overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-300"
+              className="group relative w-full py-4 md:py-6 bg-white text-black rounded-full font-bold uppercase tracking-[0.3em] text-[11px] transition-all duration-500 hover:scale-[1.04] active:scale-95 disabled:opacity-25 disabled:pointer-events-none shadow-[0_25px_50px_-12px_rgba(255,255,255,0.15)] overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-300"
             >
               <span className="relative z-10">{language === "en" ? "Begin journey" : "Začít cestu"}</span>
               <span className="sr-only">. {language === "en" ? "Starts guided breathing" : "Spustí vedené dýchání"}</span>
@@ -426,7 +426,7 @@ export default function App() {
           </button>
         )}
       </div>
-      <footer className="absolute bottom-12 text-center w-full px-6 opacity-30 pointer-events-none">
+      <footer className="absolute bottom-4 md:bottom-12 text-center w-full px-6 opacity-30 pointer-events-none hidden sm:block">
         <p className="text-[10px] text-slate-700 uppercase tracking-[0.5em] max-w-sm mx-auto leading-relaxed italic">
           {language === "en"
             ? "Calm guidance for winding down before sleep"

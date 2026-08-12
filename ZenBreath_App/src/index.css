@@ -5,6 +5,7 @@ body {
   color: #e2e8f0;
   font-family: "Inter", system-ui, sans-serif;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 .font-serif {
